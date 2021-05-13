@@ -1,6 +1,6 @@
 fun main() {
 
-    var cars = mutableListOf<Car>(Car("Rav4","three","blue"),
+    var cars = mutableListOf<Car>(Car("Rav4","four","blue"),
         Car("Rav4","ONE","red"),
         Car("Rav4","two","orange"),
         Car("Rav4","three","blue"))
@@ -9,18 +9,19 @@ fun main() {
 
     println(length("Birungi"))
 
-    var account = CurrentAccount(65239559,"Johnson",87000.00)
+    var account = CurrentAccount(65239559,"Water",87000.00)
     account.deposit(460000000.00)
     account.withdraw(2000000.00)
     account.details()
 
-    var account2 = SavingsAccount(54338999559,"Johnson",94000.00,10)
+    var account2 = SavingsAccount(509738999559,"Water",94000.00,10)
     account2.deposit(85090000.0)
     account2.withdraw(4500000.0)
     account2.details()
     account2.withdrawals()
 
 }
+
 data class Car(var make:String, var model:String,var color:String)
 fun findColor(cars:List<Car>){
     var redCars = mutableListOf<Car>()
@@ -28,9 +29,9 @@ fun findColor(cars:List<Car>){
     var others = mutableListOf<Car>()
 
 
-    var mycolor = cars.forEach { car ->  car.color}
-    println(mycolor)
-    when (mycolor) {
+    var color = cars.forEach { car ->  car.color}
+    println(color)
+    when (color) {
         "red"  -> redCars.plus(cars)
         " blue" -> blueCars.plus(cars)
         else -> others.plus(cars)
